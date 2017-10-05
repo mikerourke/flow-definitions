@@ -1,0 +1,89 @@
+{
+  "name": "flow-definitions",
+  "version": "0.0.1",
+  "description": "Library definition files for Flow.",
+  "main": "index.js",
+  "repository": "https://github.com/mikerourke/flow-definitions",
+  "author": "Mike Rourke <mike.w.rourke@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "flow-bin": "^0.56.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.2",
+    "eslint-plugin-flowtype": "^2.38.0",
+    "eslint-plugin-import": "^2.7.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint-config-airbnb-base",
+      "plugin:flowtype/recommended"
+    ],
+    "plugins": [
+      "import",
+      "flowtype"
+    ],
+    "settings": {
+      "ecmascript": 6
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "arrowFunctions": true,
+        "binaryLiterals": true,
+        "blockBindings": true,
+        "classes": true,
+        "defaultParams": true,
+        "destructuring": true,
+        "forOf": true,
+        "modules": true,
+        "objectLiteralComputedProperties": true,
+        "objectLiteralDuplicateProperties": true,
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        "octalLiterals": true,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "spread": true,
+        "superInFunctions": true,
+        "templateStrings": true,
+        "unicodeCodePointEscapes": true,
+        "globalReturn": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "max-len": [
+        "error",
+        100,
+        2,
+        {
+          "ignoreComments": true,
+          "ignoreRegExpLiterals": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+          "ignoreTrailingComments": true,
+          "ignoreUrls": true
+        }
+      ],
+      "class-methods-use-this": "off",
+      "flowtype/define-flow-type": "warn",
+      "flowtype/use-flow-type": "warn"
+    }
+  },
+  "eslintIgnore": [
+    "internals/",
+    "docs/",
+    "src/types.js",
+    "tests/",
+    "lib/"
+  ]
+}
